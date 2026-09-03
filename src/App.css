@@ -307,8 +307,6 @@ body {
 
   background: transparent;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .projects h2 {
@@ -469,7 +467,6 @@ body {
 
   background: transparent;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .contact-section .section-small {
