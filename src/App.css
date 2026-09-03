@@ -48,7 +48,7 @@ body {
 
   padding: 10px 12px;
 
-  background: rgba(10, 8, 18, 0.72);
+  background: #1a1721;
   border: 1px solid rgba(255, 255, 255, 0.2);
 
   backdrop-filter: blur(24px);
@@ -61,6 +61,8 @@ body {
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
 
   z-index: 100;
+
+  animation: dockEnter 0.7s ease-out both;
 }
 
 .dock a {
@@ -73,7 +75,10 @@ body {
   padding: 11px 17px;
   border-radius: 16px;
 
-  transition: all 0.25s ease;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .dock a:hover {
@@ -84,6 +89,18 @@ body {
 
 .dock a:active {
   transform: scale(0.95);
+}
+
+@keyframes dockEnter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
 }
 
 /* =========================
@@ -113,9 +130,11 @@ body {
 
   letter-spacing: 4px;
 
-  opacity: 0.85;
+  opacity: 0.9;
 
   margin: 0 0 24px;
+
+  animation: fadeUp 0.7s ease-out 0.1s both;
 }
 
 .hero h1 {
@@ -130,6 +149,8 @@ body {
   letter-spacing: -5px;
 
   margin: 0;
+
+  animation: fadeUp 0.8s ease-out 0.2s both;
 }
 
 .hero h1 span {
@@ -148,6 +169,8 @@ body {
   line-height: 1.3;
 
   margin: 42px 0 20px;
+
+  animation: fadeUp 0.8s ease-out 0.35s both;
 }
 
 .hero-description {
@@ -159,9 +182,11 @@ body {
 
   font-weight: 400;
 
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.88);
 
   margin: 0;
+
+  animation: fadeUp 0.8s ease-out 0.45s both;
 }
 
 .hero-buttons {
@@ -172,6 +197,8 @@ body {
   gap: 14px;
 
   margin-top: 38px;
+
+  animation: fadeUp 0.8s ease-out 0.55s both;
 }
 
 .hero-buttons a {
@@ -193,7 +220,11 @@ body {
 
   text-decoration: none;
 
-  transition: all 0.25s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .primary-button {
@@ -205,13 +236,16 @@ body {
 }
 
 .primary-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 
   background: #e9e9e9;
+
+  box-shadow:
+    0 12px 30px rgba(255, 255, 255, 0.15);
 }
 
 .secondary-button {
-  background: rgba(10, 8, 18, 0.45);
+  background: #1a1721;
 
   color: white;
 
@@ -219,11 +253,27 @@ body {
 }
 
 .secondary-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 
-  background: rgba(255, 255, 255, 0.12);
+  background: #24202d;
 
   border-color: white;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =========================
@@ -237,7 +287,7 @@ body {
 
   letter-spacing: 4px;
 
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.9);
 
   margin: 0 0 18px;
 }
@@ -254,13 +304,10 @@ body {
 
   padding: 140px 7%;
 
-  background: rgba(8, 6, 14, 0.5);
+  background: #120F17;
 
   border-top: 1px solid rgba(255, 255, 255, 0.08);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 }
 
 .projects h2 {
@@ -282,15 +329,26 @@ body {
 
   border: 1px solid rgba(255, 255, 255, 0.18);
 
-  background: rgba(12, 9, 20, 0.82);
-
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: #18151F;
 
   border-radius: 24px;
 
   box-shadow:
     0 25px 80px rgba(0, 0, 0, 0.3);
+
+  transition:
+    transform 0.4s ease,
+    border-color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.45);
 }
 
 .project-number {
@@ -298,7 +356,7 @@ body {
 
   font-weight: 600;
 
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.65);
 
   margin: 0 0 10px;
 }
@@ -322,7 +380,7 @@ body {
 
   font-size: 18px;
 
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.88);
 
   margin: 0;
 }
@@ -342,7 +400,7 @@ body {
 
   border: 1px solid rgba(255, 255, 255, 0.2);
 
-  background: rgba(255, 255, 255, 0.06);
+  background: #211D29;
 
   border-radius: 50px;
 
@@ -350,7 +408,20 @@ body {
 
   font-weight: 600;
 
-  color: rgba(255, 255, 255, 0.9);
+  color: white;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.project-tech span:hover {
+  transform: translateY(-3px);
+
+  background: #2b2635;
+
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .project-link {
@@ -368,11 +439,15 @@ body {
 
   margin-top: 12px;
 
-  transition: opacity 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .project-link:hover {
-  opacity: 0.7;
+  opacity: 0.8;
+
+  transform: translateX(6px);
 }
 
 /* =========================
@@ -391,12 +466,9 @@ body {
   flex-direction: column;
   justify-content: center;
 
-  background: rgba(8, 6, 14, 0.62);
+  background: #120F17;
 
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
 }
 
 .contact-section .section-small {
@@ -424,7 +496,7 @@ body {
 
   line-height: 1.8;
 
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.88);
 
   margin: 0 0 25px;
 }
@@ -444,11 +516,15 @@ body {
 
   margin-bottom: 38px;
 
-  transition: opacity 0.25s ease;
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
 }
 
 .contact-email:hover {
-  opacity: 0.7;
+  opacity: 0.8;
+
+  transform: translateX(5px);
 }
 
 .contact-buttons {
@@ -478,7 +554,11 @@ body {
 
   text-decoration: none;
 
-  transition: all 0.25s ease;
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .contact-buttons .primary-button {
@@ -490,13 +570,16 @@ body {
 }
 
 .contact-buttons .primary-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 
   background: #e9e9e9;
+
+  box-shadow:
+    0 12px 30px rgba(255, 255, 255, 0.15);
 }
 
 .contact-buttons .secondary-button {
-  background: rgba(255, 255, 255, 0.06);
+  background: #1a1721;
 
   color: white;
 
@@ -504,9 +587,9 @@ body {
 }
 
 .contact-buttons .secondary-button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px);
 
-  background: rgba(255, 255, 255, 0.12);
+  background: #24202d;
 
   border-color: white;
 }
@@ -631,160 +714,7 @@ body {
 }
 
 /* =========================
-   SMOOTH TRANSITIONS
-========================= */
-
-/* Page entrance */
-.portfolio {
-  animation: pageEnter 0.8s ease-out;
-}
-
-@keyframes pageEnter {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-/* Hero entrance */
-.hero-small {
-  animation: fadeUp 0.7s ease-out 0.1s both;
-}
-
-.hero h1 {
-  animation: fadeUp 0.8s ease-out 0.2s both;
-}
-
-.hero h2 {
-  animation: fadeUp 0.8s ease-out 0.35s both;
-}
-
-.hero-description {
-  animation: fadeUp 0.8s ease-out 0.45s both;
-}
-
-.hero-buttons {
-  animation: fadeUp 0.8s ease-out 0.55s both;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Navigation */
-.dock {
-  animation: dockEnter 0.7s ease-out 0.2s both;
-}
-
-@keyframes dockEnter {
-  from {
-    opacity: 0;
-    transform: translate(-50%, -20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate(-50%, 0);
-  }
-}
-
-/* Navigation links */
-.dock a {
-  transition:
-    background 0.25s ease,
-    color 0.25s ease,
-    transform 0.25s ease;
-}
-
-/* Buttons */
-.hero-buttons a,
-.contact-buttons a {
-  transition:
-    transform 0.3s ease,
-    background 0.3s ease,
-    border-color 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.hero-buttons a:hover,
-.contact-buttons a:hover {
-  transform: translateY(-4px);
-}
-
-.primary-button:hover {
-  box-shadow: 0 12px 30px rgba(255, 255, 255, 0.15);
-}
-
-/* Project card */
-.project-card {
-  transition:
-    transform 0.4s ease,
-    border-color 0.4s ease,
-    box-shadow 0.4s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-
-  border-color: rgba(255, 255, 255, 0.3);
-
-  box-shadow:
-    0 30px 90px rgba(0, 0, 0, 0.45);
-}
-
-/* Technology tags */
-.project-tech span {
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
-}
-
-.project-tech span:hover {
-  transform: translateY(-3px);
-
-  background: rgba(255, 255, 255, 0.12);
-
-  border-color: rgba(255, 255, 255, 0.4);
-}
-
-/* Project link */
-.project-link {
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
-}
-
-.project-link:hover {
-  opacity: 1;
-  transform: translateX(6px);
-}
-
-/* Email */
-.contact-email {
-  transition:
-    opacity 0.25s ease,
-    transform 0.25s ease;
-}
-
-.contact-email:hover {
-  opacity: 0.75;
-  transform: translateX(5px);
-}
-
-/* =========================
-   REDUCED MOTION
+   ACCESSIBILITY
 ========================= */
 
 @media (prefers-reduced-motion: reduce) {
@@ -797,5 +727,4 @@ body {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-
 }
