@@ -226,7 +226,7 @@ function SkillsCarousel({ autoplay = true }) {
     if (isRight) {
       return {
         zIndex: 2,
-        opacity: 0.55,
+        opacity: 0.8,
         pointerEvents: 'auto',
         transform: `translateX(${gap}px) translateY(-35px) scale(0.82) rotateY(-12deg)`,
       };
