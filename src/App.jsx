@@ -61,13 +61,12 @@ function App() {
    <SkillsCarousel />  
 
 <section id="projects" className="projects">
-
   <p className="section-small">MY WORK</p>
 
-  <h2>Featured Project</h2>
+  <h2>Selected Work</h2>
 
+  {/* PROJECT 01 */}
   <div className="project-card">
-
     <div className="project-info">
       <p className="project-number">01</p>
 
@@ -75,16 +74,14 @@ function App() {
 
       <p>
         A modern football jersey e-commerce website featuring
-        club and national team collections, World Cup products,
-        product browsing, and a complete shopping experience.
+        club and national team collections, product browsing,
+        shopping cart functionality, and a responsive user interface.
       </p>
 
       <div className="project-tech">
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
-        <span>Aiven</span>
-        <span>MySQL</span>
       </div>
 
       <a
@@ -96,9 +93,40 @@ function App() {
         View Live Site →
       </a>
     </div>
-
   </div>
 
+  {/* PROJECT 02 */}
+  <div className="project-card">
+    <div className="project-info">
+      <p className="project-number">02</p>
+
+      <h3>Endless Grind</h3>
+
+      <p>
+        A fitness management web application developed as a
+        capstone project for Endless Grind Fitness Gym. The system
+        helps manage gym memberships, training goals, and appointment
+        scheduling through a centralized web platform.
+      </p>
+
+      <div className="project-tech">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>PHP</span>
+        <span>MySQL</span>
+      </div>
+
+      <a
+        href="https://endlessgrind.vercel.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="project-link"
+      >
+        View Live Site →
+      </a>
+    </div>
+  </div>
 </section>
 
 <section id="contact" className="contact-section">
