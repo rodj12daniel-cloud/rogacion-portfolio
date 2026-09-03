@@ -83,7 +83,7 @@ function App() {
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
-        <span>PHP</span>
+        <span>Aiven</span>
         <span>MySQL</span>
       </div>
 
