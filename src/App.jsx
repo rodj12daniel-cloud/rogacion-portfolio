@@ -126,7 +126,7 @@ function App() {
             </p>
 
             <h3>
-              Endless Grind
+              Endless Grind (Capstone Project)
             </h3>
 
             <p>
