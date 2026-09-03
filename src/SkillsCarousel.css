@@ -15,8 +15,13 @@
   color: white;
 }
 
+/* =========================
+   HEADING
+========================= */
+
 .skills-heading {
   text-align: center;
+
   margin-bottom: 70px;
 }
 
@@ -25,9 +30,11 @@
 
   font-size: 12px;
 
+  font-weight: 700;
+
   letter-spacing: 4px;
 
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .skills-heading h2 {
@@ -35,13 +42,20 @@
 
   font-size: clamp(42px, 6vw, 72px);
 
-  font-weight: 600;
+  font-weight: 800;
 
   letter-spacing: -2px;
+
+  color: white;
 }
+
+/* =========================
+   WRAPPER
+========================= */
 
 .skills-wrapper {
   width: 100%;
+
   max-width: 1100px;
 
   margin: 0 auto;
@@ -68,6 +82,10 @@
 
   perspective: 1000px;
 }
+
+/* =========================
+   SKILL CARD
+========================= */
 
 .skill-card {
   position: absolute;
@@ -117,6 +135,10 @@
   border-color: rgba(255, 255, 255, 0.28);
 }
 
+/* =========================
+   SKILL ICON
+========================= */
+
 .skill-icon {
   width: 85px;
   height: 85px;
@@ -142,18 +164,24 @@
     0 0 40px rgba(82, 39, 255, 0.15);
 }
 
+/* =========================
+   CARD TEXT
+========================= */
+
 .skill-card h3 {
   margin: 0 0 8px;
 
   font-size: 28px;
 
-  font-weight: 600;
+  font-weight: 700;
+
+  color: white;
 }
 
 .skill-card span {
   font-size: 13px;
 
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.55);
 
   letter-spacing: 1px;
 }
@@ -177,13 +205,15 @@
 
   font-size: 42px;
 
-  font-weight: 600;
+  font-weight: 700;
+
+  color: white;
 }
 
 .skill-category {
   margin: 8px 0 25px;
 
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.55);
 
   font-size: 14px;
 
@@ -197,7 +227,7 @@
 
   margin: 0;
 
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.75);
 
   font-size: 17px;
 
@@ -235,7 +265,10 @@
 
   cursor: pointer;
 
-  transition: all 0.25s ease;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
 }
 
 .skills-arrows button:hover {
@@ -257,11 +290,25 @@
 @media (max-width: 768px) {
 
   .skills-section {
+    min-height: 650px;
+
     padding: 90px 5%;
   }
 
   .skills-heading {
     margin-bottom: 40px;
+  }
+
+  .skills-heading p {
+    font-size: 11px;
+
+    letter-spacing: 3px;
+  }
+
+  .skills-heading h2 {
+    font-size: 52px;
+
+    letter-spacing: -2px;
   }
 
   .skills-wrapper {
@@ -272,6 +319,8 @@
 
   .skills-visual {
     height: 330px;
+
+    width: 100%;
   }
 
   .skill-card {
@@ -280,20 +329,32 @@
 
     margin-left: -110px;
     margin-top: -140px;
+
+    border-radius: 24px;
   }
 
   .skill-icon {
     width: 70px;
     height: 70px;
 
+    margin-bottom: 22px;
+
     font-size: 30px;
+
+    border-radius: 20px;
   }
 
   .skill-card h3 {
     font-size: 24px;
   }
 
+  .skill-card span {
+    font-size: 12px;
+  }
+
   .skills-content {
+    min-height: 220px;
+
     text-align: center;
 
     align-items: center;
@@ -303,11 +364,36 @@
     font-size: 34px;
   }
 
+  .skill-category {
+    margin-bottom: 18px;
+  }
+
   .skill-description {
     font-size: 15px;
+
+    max-width: 330px;
   }
 
   .skills-arrows {
     justify-content: center;
+
+    margin-top: 25px;
+  }
+
+  .skills-arrows button {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .skill-card,
+  .skills-arrows button {
+    transition: none;
   }
 }
