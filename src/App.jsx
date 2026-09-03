@@ -82,6 +82,8 @@ function App() {
         <span>HTML</span>
         <span>CSS</span>
         <span>JavaScript</span>
+        <span>MySQL</span>
+        <span>Aiven</span>
       </div>
 
       <a
@@ -110,10 +112,8 @@ function App() {
       </p>
 
       <div className="project-tech">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>PHP</span>
+        <span>C#</span>
+        <span>ASP.NET Core</span>
         <span>MySQL</span>
       </div>
 
