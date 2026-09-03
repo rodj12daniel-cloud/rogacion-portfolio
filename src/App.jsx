@@ -9,25 +9,25 @@ function App() {
 
       {/* Background */}
       <div className="background">
-       <Silk
-  speed={5}
-  scale={1}
-  color="#5227FF"
-  noiseIntensity={1.5}
-  rotation={0}
-/>
+        <Silk
+          speed={5}
+          scale={1}
+          color="#5227FF"
+          noiseIntensity={1.5}
+          rotation={0}
+        />
       </div>
 
       {/* Navigation */}
       <nav className="dock">
-  <a href="#about">About</a>
-  <a href="#skills">Skills</a>
-  <a href="#projects">Projects</a>
-  <a href="#contact">Contact</a>
-</nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
 
-      {/* Hero */}
-      <main className="hero">
+      {/* Hero / About */}
+      <main id="about" className="hero">
 
         <p className="hero-small">
           HELLO, I'M
@@ -47,6 +47,7 @@ function App() {
         </p>
 
         <div className="hero-buttons">
+
           <a href="#projects" className="primary-button">
             View My Work
           </a>
@@ -54,124 +55,154 @@ function App() {
           <a href="#contact" className="secondary-button">
             Contact Me
           </a>
+
         </div>
 
       </main>
 
-   <SkillsCarousel />  
+      {/* Skills */}
+      <section id="skills">
+        <SkillsCarousel />
+      </section>
 
-<section id="projects" className="projects">
-  <p className="section-small">MY WORK</p>
+      {/* Projects */}
+      <section id="projects" className="projects">
 
-  <h2>Selected Work</h2>
+        <p className="section-small">
+          MY WORK
+        </p>
 
-  {/* PROJECT 01 */}
-  <div className="project-card">
-    <div className="project-info">
-      <p className="project-number">01</p>
+        <h2>
+          Selected Work
+        </h2>
 
-      <h3>Football 90</h3>
+        {/* PROJECT 01 */}
+        <div className="project-card">
 
-      <p>
-        A modern football jersey e-commerce website featuring
-        club and national team collections, product browsing,
-        shopping cart functionality, and a responsive user interface.
-      </p>
+          <div className="project-info">
 
-      <div className="project-tech">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>MySQL</span>
-        <span>Aiven</span>
-      </div>
+            <p className="project-number">
+              01
+            </p>
 
-      <a
-        href="https://football90-three.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="project-link"
-      >
-        View Live Site →
-      </a>
-    </div>
-  </div>
+            <h3>
+              Football 90
+            </h3>
 
-  {/* PROJECT 02 */}
-  <div className="project-card">
-    <div className="project-info">
-      <p className="project-number">02</p>
+            <p>
+              A modern football jersey e-commerce website featuring
+              club and national team collections, product browsing,
+              shopping cart functionality, and a responsive user interface.
+            </p>
 
-      <h3>Endless Grind</h3>
+            <div className="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>MySQL</span>
+              <span>Aiven</span>
+            </div>
 
-      <p>
-        A fitness management web application developed as a
-        capstone project for Endless Grind Fitness Gym. The system
-        helps manage gym memberships, training goals, and appointment
-        scheduling through a centralized web platform.
-      </p>
+            <a
+              href="https://football90-three.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View Live Site →
+            </a>
 
-      <div className="project-tech">
-        <span>C#</span>
-        <span>ASP.NET Core</span>
-        <span>MySQL</span>
-      </div>
+          </div>
 
-      <a
-        href="https://endlessgrind.vercel.app/"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="project-link"
-      >
-        View Live Site →
-      </a>
-    </div>
-  </div>
-</section>
+        </div>
 
-<section id="contact" className="contact-section">
+        {/* PROJECT 02 */}
+        <div className="project-card">
 
-  <p className="section-small">GET IN TOUCH</p>
+          <div className="project-info">
 
-  <h2>Let's work together.</h2>
+            <p className="project-number">
+              02
+            </p>
 
-  <p className="contact-description">
-    I'm currently open to opportunities in web development,
-    frontend development, and UI/UX design.
-  </p>
+            <h3>
+              Endless Grind
+            </h3>
 
-  <a
-    href="mailto:rodj12daniel@gmail.com"
-    className="contact-email"
-  >
-    rodj12daniel@gmail.com
-  </a>
+            <p>
+              A fitness management web application developed as a
+              capstone project for Endless Grind Fitness Gym. The system
+              helps manage gym memberships, training goals, and appointment
+              scheduling through a centralized web platform.
+            </p>
 
-  <div className="contact-buttons">
+            <div className="project-tech">
+              <span>C#</span>
+              <span>ASP.NET Core</span>
+              <span>MySQL</span>
+            </div>
 
-  <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=rodj12daniel@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="primary-button"
->
-  Email Me
-</a>
+            <a
+              href="https://endlessgrind.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              View Live Site →
+            </a>
 
-    <a
-      href={resume}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="secondary-button"
-    >
-      View Resume
-    </a>
+          </div>
 
-  </div>
+        </div>
 
-</section>
+      </section>
 
+      {/* Contact */}
+      <section id="contact" className="contact-section">
 
+        <p className="section-small">
+          GET IN TOUCH
+        </p>
+
+        <h2>
+          Let's work together.
+        </h2>
+
+        <p className="contact-description">
+          I'm currently open to opportunities in web development,
+          frontend development, and UI/UX design.
+        </p>
+
+        <a
+          href="mailto:rodj12daniel@gmail.com"
+          className="contact-email"
+        >
+          rodj12daniel@gmail.com
+        </a>
+
+        <div className="contact-buttons">
+
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=rodj12daniel@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="primary-button"
+          >
+            Email Me
+          </a>
+
+          <a
+            href={resume}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="secondary-button"
+          >
+            View Resume
+          </a>
+
+        </div>
+
+      </section>
 
     </div>
   );
