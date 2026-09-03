@@ -1,0 +1,223 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #120F17;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.portfolio {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Aero Shards */
+
+.background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+}
+
+/* Navigation */
+
+.navbar {
+  position: relative;
+  z-index: 10;
+
+  height: 80px;
+  padding: 0 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 35px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  z-index: 5;
+
+  min-height: calc(100vh - 80px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 0 7%;
+  max-width: 1000px;
+}
+
+.hero-small {
+  color: white;
+  font-size: 13px;
+  letter-spacing: 4px;
+  opacity: 0.6;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: clamp(60px, 9vw, 120px);
+  line-height: 0.95;
+  letter-spacing: -6px;
+  margin: 0;
+}
+
+.hero h1 span {
+  color: white;
+  display: block;
+  opacity: 1;
+}
+
+.hero h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 400;
+  margin: 30px 0 15px;
+}
+
+.hero-description {
+  max-width: 520px;
+  line-height: 1.7;
+  font-size: 17px;
+  opacity: 0.65;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.hero-buttons a {
+  text-decoration: none;
+  padding: 14px 25px;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.primary-button {
+  background: white;
+  color: #120F17;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+}
+
+.secondary-button {
+  border: 1px solid rgba(255,255,255,0.3);
+  color: white;
+}
+
+.secondary-button:hover {
+  border-color: white;
+}
+
+/* Projects */
+
+.projects {
+  position: relative;
+  z-index: 5;
+  min-height: 100vh;
+  padding: 120px 7%;
+}
+
+.section-small {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 15px;
+}
+
+.projects h2 {
+  font-size: clamp(45px, 6vw, 80px);
+  margin: 0 0 60px;
+  letter-spacing: -3px;
+}
+
+.project-card {
+  max-width: 900px;
+  padding: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(18, 15, 23, 0.65);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+}
+
+.project-number {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.project-info h3 {
+  font-size: 50px;
+  margin: 10px 0 20px;
+}
+
+.project-info > p {
+  max-width: 650px;
+  line-height: 1.7;
+  opacity: 0.75;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 30px 0;
+}
+
+.project-tech span {
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  font-size: 12px;
+}
+
+.project-link {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.project-link:hover {
+  opacity: 0.7;
+}
